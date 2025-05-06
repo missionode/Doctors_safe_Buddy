@@ -1,0 +1,54 @@
+/* css/profile_doctor.css */
+.profile-header {
+    background-color: white;
+    box-shadow: var(--box-shadow-elevation);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.profile-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.profile-header button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.profile-main {
+    padding: 2rem 0;
+    background-color: var(--background-lightest);
+}
+
+.profile-card {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profile-info {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.profile-info:last-child {
+    border-bottom: none;
+}
+
+.profile-info label {
+    font-weight: bold;
+    width: 150px; /* Adjust width as needed */
+}
+
+.profile-info span {
+    flex-grow: 1;
+}

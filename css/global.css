@@ -1,0 +1,132 @@
+/* Global Styles */
+:root {
+    --primary-color: #007bff; /* Example primary color */
+    --secondary-color: #6c757d; /* Example secondary color */
+    --background-lightest: #f8f9fa;
+    --border-light: #e9ecef;
+    --text-dark: #212529;
+    --font-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    --border-radius: 0.5rem;
+    --box-shadow-elevation: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --transition-duration: 0.15s;
+    --transition-easing: ease-in-out;
+}
+
+body {
+    font-family: var(--font-sans-serif);
+    background-color: var(--background-lightest);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.grid-layout {
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-elevation);
+    padding: 1.5rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-duration) var(--transition-easing);
+}
+
+a:hover {
+    color: darken(var(--primary-color), 15%);
+}
+
+button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-duration) var(--transition-easing),
+                box-shadow var(--transition-duration) var(--transition-easing);
+    box-shadow: var(--box-shadow-elevation);
+}
+
+button:hover {
+    background-color: darken(var(--primary-color), 10%);
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+    background-color: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    transition: border-color var(--transition-duration) var(--transition-easing),
+                box-shadow var(--transition-duration) var(--transition-easing);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Subtle transitions for interactive elements */
+.btn,
+.card,
+a {
+    transition: all var(--transition-duration) var(--transition-easing);
+}
+
+/* Responsive adjustments (example for smaller screens) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+}

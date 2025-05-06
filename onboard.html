@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment App - Onboarding</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/onboard.css">
+    <script src="js/onboard.js"></script>
+</head>
+<body>
+    <div class="onboard-container">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="images/feature1.svg" alt="Feature 1">
+                <h3>Easy Appointment Booking</h3>
+                <p>Book appointments with your doctor in just a few taps.</p>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/feature2.svg" alt="Feature 2">
+                <h3>View Your Medical History</h3>
+                <p>Access your past appointments and prescriptions easily.</p>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/feature3.svg" alt="Feature 3">
+                <h3>Get Reminders</h3>
+                <p>Receive timely reminders for your upcoming appointments.</p>
+            </div>
+            <button class="prev-button" onclick="prevSlide()">&#10094;</button>
+            <button class="next-button" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <div class="navigation-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <button class="onboard-button" onclick="window.location.href='signup.html'">Get Started</button>
+    </div>
+</body>
+</html>

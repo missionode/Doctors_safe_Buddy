@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment App - Appointment Details</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/appointment_details_doctor.css">
+    <script src="js/appointment_details_doctor.js"></script>
+</head>
+<body>
+    <header class="view-appointment-header">
+        <div class="container">
+            <h1>Appointment Details</h1>
+            <button onclick="window.location.href='landing_doctor.html'">Back to Dashboard</button>
+        </div>
+    </header>
+
+    <main class="view-appointment-main">
+        <div class="container">
+            <div class="card view-appointment-card">
+                <div class="detail-item">
+                    <label>Patient:</label>
+                    <span id="patient-name">(Patient Name)</span>
+                </div>
+                <div class="detail-item">
+                    <label>Reason:</label>
+                    <span id="appointment-reason"></span>
+                </div>
+                <div class="detail-item">
+                    <label>Date:</label>
+                    <span id="appointment-date"></span>
+                </div>
+                <div class="detail-item">
+                    <label>Time:</label>
+                    <span id="appointment-time"></span>
+                </div>
+                <div class="detail-item">
+                    <label>Status:</label>
+                    <span id="appointment-status"></span>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="complete-button" onclick="markAsCompleted()" style="display:block;">Mark as Completed</button>
+                    <button id="add-prescription-button" onclick="openPrescriptionForm()" style="display:none;">Add/View Prescription</button>
+                </div>
+
+                <div id="prescription-form" style="display:none;">
+                    <h2>Prescription</h2>
+                    <div class="form-group">
+                        <label for="observations">Doctor's Observations:</label>
+                        <textarea id="observations" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="medication">Medication(s):</label>
+                        <div id="medication-inputs">
+                            <input type="text" class="medication-input" placeholder="Medication 1">
+                        </div>
+                        <button type="button" onclick="addMedicationField()">Add Medication</button>
+                    </div>
+                    <button type="button" onclick="savePrescription()">Save Prescription</button>
+                    <button type="button" onclick="closePrescriptionForm()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

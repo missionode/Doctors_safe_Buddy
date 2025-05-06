@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment App - My Appointments</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/list_appointment_patient.css">
+    <script src="js/list_appointment_patient.js"></script>
+</head>
+<body>
+    <header class="appointment-list-header">
+        <div class="container">
+            <h1>My Appointments</h1>
+            <div class="filter-search">
+                <input type="text" id="search-input" placeholder="Search by reason or date">
+                <select id="filter-status">
+                    <option value="">All Status</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="appointment-list-main">
+        <div class="container">
+            <div id="appointment-list" class="appointment-grid grid-layout">
+                <div class="card appointment-item">
+                    <h3>Reason: Checkup</h3>
+                    <p>Date: 2025-05-15</p>
+                    <p>Time: 11:00 AM</p>
+                    <p>Status: Pending</p>
+                    <button onclick="window.location.href='appointment_view_patient.html?id=123'">View Details</button>
+                </div>
+                <div class="card appointment-item">
+                    <h3>Reason: Follow-up</h3>
+                    <p>Date: 2025-04-30</p>
+                    <p>Time: 03:00 PM</p>
+                    <p>Status: Completed</p>
+                    <button onclick="window.location.href='appointment_view_patient.html?id=456'">View Details</button>
+                </div>
+            </div>
+            <p id="no-appointments" style="display:none;">No appointments found.</p>
+        </div>
+    </main>
+</body>
+</html>

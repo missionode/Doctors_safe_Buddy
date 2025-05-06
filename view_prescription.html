@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment App - View Prescription</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/view_prescription.css">
+    <script src="js/view_prescription.js"></script>
+</head>
+<body>
+    <header class="prescription-header">
+        <div class="container">
+            <h1>Prescription Details</h1>
+            <button onclick="window.location.href='appointment_view_patient.html?id=' + getAppointmentId()">Back to Appointment</button>
+        </div>
+    </header>
+
+    <main class="prescription-main">
+        <div class="container">
+            <div class="card prescription-card">
+                <div class="prescription-section">
+                    <h2>Doctor's Observations</h2>
+                    <p id="observations"></p>
+                </div>
+                <div class="prescription-section">
+                    <h2>Prescribed Medications</h2>
+                    <ul id="medications-list">
+                        </ul>
+                    <p id="no-medications" style="display:none;">No medications prescribed.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* css/schedule_doctor.css */
+.schedule-header {
+    background-color: white;
+    box-shadow: var(--box-shadow-elevation);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.schedule-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.schedule-main {
+    padding: 2rem 0;
+    background-color: var(--background-lightest);
+}
+
+.schedule-card {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.schedule-card h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+#availability-display p {
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+#availability-display strong {
+    font-weight: bold;
+}
+
+.schedule-card button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-duration) var(--transition-easing);
+    margin-top: 1.5rem;
+}
+
+.schedule-card button:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+#upcoming-appointments {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.appointment-card {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.appointment-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.appointment-card p {
+    color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+}
+
+.appointment-card button {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+}
+
+#no-upcoming-appointments {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-top: 2rem;
+}

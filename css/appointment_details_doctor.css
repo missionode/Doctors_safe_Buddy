@@ -1,0 +1,173 @@
+/* css/appointment_details_doctor.css */
+.view-appointment-header {
+    background-color: white;
+    box-shadow: var(--box-shadow-elevation);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.view-appointment-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-appointment-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.view-appointment-header button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.view-appointment-main {
+    padding: 2rem 0;
+    background-color: var(--background-lightest);
+}
+
+.view-appointment-card {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.detail-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-item label {
+    font-weight: bold;
+    width: 150px; /* Adjust width as needed */
+}
+
+.detail-item span {
+    flex-grow: 1;
+}
+
+.action-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.action-buttons button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-duration) var(--transition-easing);
+}
+
+#complete-button {
+    background-color: green;
+    color: white;
+}
+
+#complete-button:hover {
+    background-color: darkgreen;
+}
+
+#add-prescription-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#add-prescription-button:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+#prescription-form {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-light);
+}
+
+#prescription-form h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+#prescription-form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+#prescription-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
+#prescription-form textarea,
+#prescription-form input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+#prescription-form textarea:focus,
+#prescription-form input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25);
+}
+
+#prescription-form button {
+    padding: 0.75rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-duration) var(--transition-easing);
+    margin-top: 0.5rem;
+}
+
+#prescription-form button[onclick*="savePrescription"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#prescription-form button[onclick*="savePrescription"]:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+#prescription-form button[onclick*="closePrescriptionForm"] {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+#prescription-form button[onclick*="closePrescriptionForm"]:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+#prescription-form button[onclick*="addMedicationField"] {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+#prescription-form button[onclick*="addMedicationField"]:hover {
+    background-color: #e08e0b;
+}
+
+#medication-inputs {
+    margin-bottom: 0.75rem;
+}
+
+#medication-inputs input {
+    margin-bottom: 0.5rem;
+}

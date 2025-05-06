@@ -1,0 +1,69 @@
+/* css/faq.css */
+.faq-header {
+    background-color: white;
+    box-shadow: var(--box-shadow-elevation);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.faq-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.faq-main {
+    padding: 2rem 0;
+    background-color: var(--background-lightest);
+}
+
+.faq-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background-color: white;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-elevation);
+    padding: 1rem;
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.2rem;
+}
+
+.faq-question.active::after {
+    content: '-';
+}
+
+.faq-answer {
+    padding: 0.75rem 0;
+    color: var(--secondary-color);
+    display: none; /* Initially hidden */
+    border-top: 1px solid var(--border-light);
+    margin-top: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .faq-list {
+        grid-template-columns: 1fr;
+    }
+}

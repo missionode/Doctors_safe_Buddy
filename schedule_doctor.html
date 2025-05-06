@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment App - My Schedule</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/schedule_doctor.css">
+    <script src="js/schedule_doctor.js"></script>
+</head>
+<body>
+    <header class="schedule-header">
+        <div class="container">
+            <h1>My Schedule</h1>
+        </div>
+    </header>
+
+    <main class="schedule-main">
+        <div class="container">
+            <div class="card schedule-card">
+                <h2>Availability</h2>
+                <div id="availability-display">
+                    <p><strong>Monday:</strong> 9:00 AM - 5:00 PM</p>
+                    <p><strong>Tuesday:</strong> 9:00 AM - 5:00 PM</p>
+                    <p><strong>Wednesday:</strong> 9:00 AM - 1:00 PM</p>
+                    <p><strong>Thursday:</strong> 9:00 AM - 5:00 PM</p>
+                    <p><strong>Friday:</strong> 9:00 AM - 5:00 PM</p>
+                    <p><strong>Saturday:</strong> Closed</p>
+                    <p><strong>Sunday:</strong> Closed</p>
+                </div>
+                <button onclick="window.location.href='edit_schedule_doctor.html'">Edit Availability</button>
+            </div>
+
+            <h2>Upcoming Appointments</h2>
+            <div id="upcoming-appointments" class="appointment-grid grid-layout">
+                <div class="card appointment-card">
+                    <h3>Patient: John Doe</h3>
+                    <p>Date: 2025-05-07</p>
+                    <p>Time: 10:00 AM</p>
+                    <button onclick="window.location.href='appointment_details_doctor.html?id=1'">View Details</button>
+                </div>
+                <div class="card appointment-card">
+                    <h3>Patient: Jane Smith</h3>
+                    <p>Date: 2025-05-07</p>
+                    <p>Time: 11:30 AM</p>
+                    <button onclick="window.location.href='appointment_details_doctor.html?id=2'">View Details</button>
+                </div>
+                <p id="no-upcoming-appointments" style="display:none;">No upcoming appointments.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

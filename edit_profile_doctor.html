@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment App - Edit Profile</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/edit_profile_doctor.css">
+    <script src="js/edit_profile_doctor.js"></script>
+</head>
+<body>
+    <header class="profile-edit-header">
+        <div class="container">
+            <h1>Edit Profile</h1>
+        </div>
+    </header>
+
+    <main class="profile-edit-main">
+        <div class="container">
+            <div class="card profile-edit-card">
+                <form id="profileForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="specialization">Specialization:</label>
+                        <input type="text" id="specialization" name="specialization">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact Number:</label>
+                        <input type="tel" id="contact" name="contact">
+                    </div>
+                    <button type="submit">Save Profile</button>
+                    <button type="button" class="cancel-button" onclick="window.location.href='profile_doctor.html'">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

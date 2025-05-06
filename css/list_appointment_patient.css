@@ -1,0 +1,76 @@
+/* css/list_appointment_patient.css */
+.appointment-list-header {
+    background-color: white;
+    box-shadow: var(--box-shadow-elevation);
+    padding: 1rem 0;
+}
+
+.appointment-list-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.appointment-list-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.filter-search {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-search input[type="text"],
+.filter-search select {
+    padding: 0.5rem;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.appointment-list-main {
+    padding: 2rem 0;
+    background-color: var(--background-lightest);
+}
+
+#appointment-list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.appointment-item {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.appointment-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.appointment-item p {
+    color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+}
+
+.appointment-item button {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+}
+
+#no-appointments {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .filter-search {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

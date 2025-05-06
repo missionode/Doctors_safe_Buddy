@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment App - Create/Edit Profile</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/create_edit_profile.css">
+    <script src="js/create_edit_profile.js"></script>
+</head>
+<body>
+    <header class="profile-edit-header">
+        <div class="container">
+            <h1>Create/Edit Profile</h1>
+        </div>
+    </header>
+
+    <main class="profile-edit-main">
+        <div class="container">
+            <div class="card profile-edit-card">
+                <form id="profileForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="1" max="150">
+                    </div>
+                    <div class="form-group">
+                        <label for="sex">Sex:</label>
+                        <select id="sex" name="sex">
+                            <option value="">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob">
+                    </div>
+                    <div class="form-group">
+                        <label for="bloodGroup">Blood Group:</label>
+                        <select id="bloodGroup" name="bloodGroup">
+                            <option value="">Select</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    <button type="submit">Save Profile</button>
+                    <button type="button" class="cancel-button" onclick="window.location.href='profile_view.html'">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

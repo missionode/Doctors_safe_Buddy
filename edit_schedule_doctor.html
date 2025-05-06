@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment App - Edit Schedule</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/edit_schedule_doctor.css">
+</head>
+<body>
+    <header class="edit-schedule-header">
+        <div class="container">
+            <h1>Edit My Availability</h1>
+        </div>
+    </header>
+
+    <main class="edit-schedule-main">
+        <div class="container">
+            <div class="card edit-schedule-card">
+                <form id="availabilityForm">
+                    <div class="day-schedule">
+                        <h2>Monday</h2>
+                        <div id="monday-slots" class="slots-container">
+                        </div>
+                        <button type="button" class="add-slot" data-day="monday" onclick="addSlot('monday')">Add Slot</button>
+                    </div>
+
+                    <div class="day-schedule">
+                        <h2>Tuesday</h2>
+                        <div id="tuesday-slots" class="slots-container">
+                        </div>
+                        <button type="button" class="add-slot" data-day="tuesday" onclick="addSlot('tuesday')">Add Slot</button>
+                    </div>
+
+                    <div class="day-schedule">
+                        <h2>Wednesday</h2>
+                        <div id="wednesday-slots" class="slots-container">
+                        </div>
+                        <button type="button" class="add-slot" data-day="wednesday" onclick="addSlot('wednesday')">Add Slot</button>
+                    </div>
+
+                    <div class="day-schedule">
+                        <h2>Thursday</h2>
+                        <div id="thursday-slots" class="slots-container">
+                        </div>
+                        <button type="button" class="add-slot" data-day="thursday" onclick="addSlot('thursday')">Add Slot</button>
+                    </div>
+
+                    <div class="day-schedule">
+                        <h2>Friday</h2>
+                        <div id="friday-slots" class="slots-container">
+                        </div>
+                        <button type="button" class="add-slot" data-day="friday" onclick="addSlot('friday')">Add Slot</button>
+                    </div>
+
+                    <div class="day-schedule">
+                        <h2>Saturday</h2>
+                        <div id="saturday-slots" class="slots-container">
+                        </div>
+                        <button type="button" class="add-slot" data-day="saturday" onclick="addSlot('saturday')">Add Slot</button>
+                    </div>
+
+                    <div class="day-schedule">
+                        <h2>Sunday</h2>
+                        <div id="sunday-slots" class="slots-container">
+                        </div>
+                        <button type="button" class="add-slot" data-day="sunday" onclick="addSlot('sunday')">Add Slot</button>
+                    </div>
+
+                    <button type="submit">Save Availability</button>
+                    <button type="button" class="cancel-button" onclick="window.location.href='schedule_doctor.html'">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="js/edit_schedule_doctor.js"></script>
+</body>
+</html>

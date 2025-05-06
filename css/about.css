@@ -1,0 +1,75 @@
+/* css/about.css */
+.about-header {
+    background-color: white;
+    box-shadow: var(--box-shadow-elevation);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.about-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.about-main {
+    padding: 2rem 0;
+    background-color: var(--background-lightest);
+}
+
+.about-card {
+    padding: 2rem;
+    text-align: center;
+}
+
+.app-logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+.about-card h2 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.version {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.about-card p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.about-card h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.about-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.about-card ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.about-card ul li:last-child {
+    border-bottom: none;
+}
+
+.contact a {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+    margin-top: 2rem;
+}

@@ -1,0 +1,102 @@
+/* css/add_appointment.css */
+.add-appointment-header {
+    background-color: white;
+    box-shadow: var(--box-shadow-elevation);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.add-appointment-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.add-appointment-main {
+    padding: 2rem 0;
+    background-color: var(--background-lightest);
+}
+
+.add-appointment-card {
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
+.form-group textarea,
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.form-group textarea:focus,
+.form-group input[type="date"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25);
+}
+
+.available-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.available-slots-grid button {
+    padding: 0.75rem;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    background-color: white;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: background-color var(--transition-duration) var(--transition-easing),
+                color var(--transition-duration) var(--transition-easing);
+}
+
+.available-slots-grid button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.available-slots-grid button.selected {
+    background-color: green;
+    color: white;
+    border-color: green;
+}
+
+.add-appointment-card button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-duration) var(--transition-easing);
+    margin-top: 1.5rem;
+}
+
+.add-appointment-card button[type="submit"]:disabled {
+    background-color: var(--border-light);
+    cursor: not-allowed;
+}
+
+.add-appointment-card button[type="submit"]:not(:disabled):hover {
+    background-color: darken(var(--primary-color), 10%);
+}

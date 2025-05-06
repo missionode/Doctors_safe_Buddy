@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment App - Doctor Dashboard</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/landing_doctor.css">
+    <script src="js/landing_doctor.js"></script>
+</head>
+<body>
+    <header class="doctor-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="hamburger-menu">
+                    <button onclick="toggleMenu()">☰</button>
+                    <div class="menu-items">
+                        <a href="profile_doctor.html">Profile</a>
+                        <a href="schedule_doctor.html">My Schedule</a>
+                        <a href="settings_doctor.html">Settings</a>
+                        <a href="#" onclick="logoutDoctor()">Logout</a>
+                    </div>
+                </div>
+                <h1>Welcome, Dr. Smith!</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="doctor-main">
+        <div class="container">
+            <h2>Today's Appointments</h2>
+            <div id="appointments-list" class="appointment-grid grid-layout">
+                <div class="card appointment-card">
+                    <h3>Patient: John Doe</h3>
+                    <p>Time: 10:00 AM</p>
+                    <p>Reason: Checkup</p>
+                    <button onclick="window.location.href='appointment_details_doctor.html?id=1'">View Details</button>
+                </div>
+                <div class="card appointment-card">
+                    <h3>Patient: Jane Smith</h3>
+                    <p>Time: 11:30 AM</p>
+                    <p>Reason: Follow-up</p>
+                    <button onclick="window.location.href='appointment_details_doctor.html?id=2'">View Details</button>
+                </div>
+            </div>
+            <p id="no-appointments" style="display:none;">No appointments for today.</p>
+        </div>
+    </main>
+</body>
+</html>

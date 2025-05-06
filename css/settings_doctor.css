@@ -1,0 +1,23 @@
+/* css/settings_doctor.css */
+.settings-header {
+    background-color: white;
+    box-shadow: var(--box-shadow-elevation);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.settings-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.settings-main {
+    padding: 2rem 0;
+    background-color: var(--background-lightest);
+}
+
+.settings-main .card {
+    padding: 2rem;
+    text-align: center;
+    color: var(--secondary-color);
+}

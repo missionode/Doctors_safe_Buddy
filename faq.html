@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment App - FAQ</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <script src="js/faq.js"></script>
+</head>
+<body>
+    <header class="faq-header">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+    </header>
+
+    <main class="faq-main">
+        <div class="container">
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleAnswer('faq1')">
+                        How do I book an appointment?
+                    </button>
+                    <div id="faq1" class="faq-answer">
+                        To book an appointment, navigate to the "Add Appointment" page, select the desired date and time slot from the available options, and confirm your booking.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleAnswer('faq2')">
+                        Can I reschedule or cancel my appointment?
+                    </button>
+                    <div id="faq2" class="faq-answer">
+                        Yes, you can reschedule or cancel your appointment up to 24 hours before the scheduled time. Please visit the "List Appointment" page to manage your bookings.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleAnswer('faq3')">
+                        How can I view my past appointments?
+                    </button>
+                    <div id="faq3" class="faq-answer">
+                        You can view your past appointment history on the "Landing" page or the "List Appointment" page.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleAnswer('faq4')">
+                        Where can I see my prescriptions?
+                    </button>
+                    <div id="faq4" class="faq-answer">
+                        Once your appointment is completed and the doctor has added a prescription, you can view it on the "View Prescription" page, accessible from the "Appointment View" page.
+                    </div>
+                </div>
+
+                </div>
+        </div>
+    </main>
+</body>
+</html>

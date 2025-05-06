@@ -1,0 +1,19 @@
+/* css/splash.css */
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.splash-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.splash-container p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
