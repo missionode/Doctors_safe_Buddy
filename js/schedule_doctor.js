@@ -62,7 +62,7 @@ function loadUpcomingAppointments() {
             appointmentCard.classList.add('card', 'appointment-card');
             // You'd likely need to fetch patient names based on patient IDs
             appointmentCard.innerHTML = `
-                <h3>Patient: (Patient Name)</h3>
+                <h3>Patient: ${appointment.patientName}</h3>
                 <p>Date: ${appointment.date}</p>
                 <p>Time: ${formatTime(appointment.startTime)} - ${formatTime(appointment.endTime)}</p>
                 <button onclick="window.location.href='appointment_details_doctor.html?id=${index}'">View Details</button>

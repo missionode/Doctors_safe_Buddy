@@ -26,41 +26,25 @@
     </header>
 
     <main class="landing-main">
-        <section class="feature-carousel-section">
-            <div class="carousel-container">
-                <div class="carousel-slide active">
-                    <img src="images/feature1.svg" alt="Feature 1">
-                    <h3>Easy Appointment Booking</h3>
-                    <p>Book your appointments quickly and easily.</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="images/feature2.svg" alt="Feature 2">
-                    <h3>Manage Your Health Records</h3>
-                    <p>Access and manage your health information in one place.</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="images/feature3.svg" alt="Feature 3">
-                    <h3>Get Appointment Reminders</h3>
-                    <p>Never miss an appointment with our timely reminders.</p>
-                </div>
-                <button class="prev-button" onclick="prevFeatureSlide()">&#10094;</button>
-                <button class="next-button" onclick="nextFeatureSlide()">&#10095;</button>
-                <div class="carousel-dots">
-                    <span class="dot active" onclick="currentFeatureSlide(0)"></span>
-                    <span class="dot" onclick="currentFeatureSlide(1)"></span>
-                    <span class="dot" onclick="currentFeatureSlide(2)"></span>
-                </div>
-            </div>
-        </section>
+        
 
         <section class="appointment-history-section">
             <div class="container">
-                <h2>Appointment History</h2>
+                <h2>Advanced Filter </h2>
                 <div class="appointment-grid grid-layout">
                 </div>
-                <button class="view-all-button" onclick="window.location.href='list_appointment_patient.html'">View All Appointments</button>
+                <button class="view-all-button" onclick="window.location.href='list_appointment_patient.html'">Filter Appointments</button>
             </div>
         </section>
+
+        <div class="container">
+            <div id="appointment-history">
+                <appointment-history-header></appointment-history-header>
+                <appointment-history-list></appointment-history-list>
+            </div>
+        </div>
+
+
     </main>
 
     <script src="js/landing_patient.js"></script>

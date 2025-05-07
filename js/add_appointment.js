@@ -91,28 +91,26 @@ document.addEventListener('DOMContentLoaded', () => {
             { hour: 'numeric', minute: '2-digit', hour12: true });
     }
 
-    //  This is a placeholder function.  You MUST replace this with your 
-    //  actual method of getting the patient's name.  This could involve
-    //  reading it from a hidden form field,  retrieving it from a
-    //  session variable,  or looking it up from a database.
     function getPatientName() {
-        //  Replace this with your actual logic.  For example:
-        //  1. If you have a hidden input field in your form:
-        //     return document.getElementById('patientName').value;
-        //  2. If you store the patient's name in localStorage during login:
-        //     return localStorage.getItem('loggedInPatientName');
-        //  3. If you have it in a server-side session (you'd need to 
-        //     make an AJAX request):
-        //     //  Example (requires you to set up a server endpoint):
-        //     let xhr = new XMLHttpRequest();
-        //     xhr.open('GET', '/api/getPatientName', false); //  `false` for synchronous
-        //     xhr.send();
-        //     if (xhr.status === 200) {
-        //        return JSON.parse(xhr.responseText).name;
-        //     } else {
-        //        console.error('Failed to get patient name');
-        //        return 'Unknown Patient'; //  Fallback
-        //     }
-        return "John Doe";  //  Placeholder
+        //  Replace this with your actual logic.
+        //  2. If you store the patient's name in localStorage under the key 'userProfile':
+        const userProfileString = localStorage.getItem('userProfile');
+        if (userProfileString) {
+            try {
+                const userProfile = JSON.parse(userProfileString);
+                if (userProfile && userProfile.name) {
+                    return userProfile.name;
+                } else {
+                    console.error("Patient name not found in userProfile.");
+                    return "Unknown Patient"; // Or handle the missing name as needed
+                }
+            } catch (error) {
+                console.error("Error parsing userProfile from localStorage:", error);
+                return "Unknown Patient"; // Or handle the error as needed
+            }
+        } else {
+            console.error("userProfile not found in localStorage.");
+            return "Unknown Patient"; // Or handle the missing profile as needed
+        }
     }
 });

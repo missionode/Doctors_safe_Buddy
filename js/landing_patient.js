@@ -6,30 +6,6 @@ function toggleMenu() {
     menuItems.style.display = menuItems.style.display === 'flex' ? 'none' : 'flex';
 }
 
-// Feature Carousel functionality
-let featureSlideIndex = 0; // Declare featureSlideIndex once here
-const featureSlides = document.querySelectorAll('.carousel-slide');
-const featureDots = document.querySelectorAll('.carousel-dots .dot');
-
-function showFeatureSlide(n) {
-    featureSlides.forEach(slide => slide.classList.remove('active'));
-    featureDots.forEach(dot => dot.classList.remove('active'));
-    featureSlideIndex = (n + featureSlides.length) % featureSlides.length;
-    featureSlides[featureSlideIndex].classList.add('active');
-    featureDots[featureSlideIndex].classList.add('active');
-}
-
-function nextFeatureSlide() {
-    showFeatureSlide(featureSlideIndex + 1);
-}
-
-function prevFeatureSlide() {
-    showFeatureSlide(featureSlideIndex - 1);
-}
-
-function currentFeatureSlide(n) {
-    showFeatureSlide(n);
-}
 
 function displayAppointmentHistory() {
     const appointmentGrid = document.querySelector('.appointment-grid');
@@ -65,7 +41,80 @@ function displayAppointmentHistory() {
     }
 }
 
+
+// JavaScript - appointment_history.js
 document.addEventListener('DOMContentLoaded', () => {
-    showFeatureSlide(featureSlideIndex); // Show the initial slide
-    displayAppointmentHistory(); // Call the function to display appointments
+
+    if (!customElements.get('appointment-history-header')) {
+        class AppointmentHistoryHeader extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `<header class="appointment-history-header">
+                    <h2>Appointment History</h2>
+                    <p>View your past and upcoming appointments.</p>
+                </header>`;
+            }
+        }
+        customElements.define('appointment-history-header', AppointmentHistoryHeader);
+    }
+
+    if (!customElements.get('appointment-history-list')) {
+        class AppointmentHistoryList extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `<ul class="appointment-list"></ul>`;
+                this.renderAppointments();
+            }
+
+            renderAppointments() {
+                const appointmentList = this.querySelector('.appointment-list');
+                const appointments = this.getAppointments();
+
+                if (appointments.length === 0) {
+                    appointmentList.innerHTML = `<p>No appointments found.</p>`;
+                    return;
+                }
+
+                const appointmentItems = appointments.map(appointment => {
+                    let prescriptionHTML = '';
+                    if (appointment.prescription) {
+                        prescriptionHTML = `
+                            <div class="appointment-item__prescription">
+                                <span class="appointment-item__prescription-title">Prescription:</span>
+                                <p>Observations: ${appointment.prescription.observations}</p>
+                                <p>Medications:</p>
+                                <ul class="appointment-item__medications">
+                                ${appointment.prescription.medications.map(med => `<li>${med}</li>`).join('')}
+                                </ul>
+                            </div>
+                        `;
+                    }
+
+                    return `<li class="appointment-item">
+                        <span class="appointment-item__date">Date: ${appointment.date}</span>
+                        <span class="appointment-item__details">Time: ${appointment.startTime} - ${appointment.endTime}</span>
+                        <span class="appointment-item__details">Reason: ${appointment.reason}</span>
+                        <span class="appointment-item__details">Patient: ${appointment.patientName || 'N/A'}</span>
+                        <span class="appointment-item__status">Status: ${appointment.status}</span>
+                        ${prescriptionHTML}
+                    </li>`;
+                }).join('');
+
+                appointmentList.innerHTML = appointmentItems;
+            }
+
+            getAppointments() {
+                //  Fetch the data from local storage
+                const storedAppointments = localStorage.getItem('patientAppointments');
+                if (storedAppointments) {
+                    try {
+                        return JSON.parse(storedAppointments);
+                    } catch (error) {
+                        console.error('Error parsing patientAppointments from localStorage:', error);
+                        return []; // Return an empty array in case of an error to avoid crashing
+                    }
+                }
+                return []; // Return empty array if patientAppointments does not exist
+            }
+        }
+        customElements.define('appointment-history-list', AppointmentHistoryList);
+    }
 });

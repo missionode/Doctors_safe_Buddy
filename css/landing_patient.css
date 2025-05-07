@@ -183,3 +183,82 @@
         margin-left: 1rem;
     }
 }
+
+// CSS - appointment_history.css
+.appointment-history-header {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.appointment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.appointment-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* Make appointment items responsive */
+  flex-basis: calc(100% - 2rem); /* Full width minus margin */
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .appointment-item {
+    flex-basis: calc(50% - 2rem); /* 2 items per row on medium screens */
+    max-width: calc(50% - 2rem);
+  }
+}
+
+@media (min-width: 992px) {
+  .appointment-item {
+    flex-basis: calc(33.33% - 2rem); /* 3 items per row on large screens */
+    max-width: calc(33.33% - 2rem);
+  }
+}
+
+
+.appointment-item__date {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.appointment-item__details {
+  /* No specific style needed, but you can add some if you want */
+}
+
+.appointment-item__status {
+  font-style: italic;
+  color: #555;
+}
+
+.appointment-item__prescription {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.appointment-item__prescription-title {
+  font-weight: bold;
+}
+
+.appointment-item__medications {
+  list-style: disc;
+  padding-left: 20px;
+}
+.appointment-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}

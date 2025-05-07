@@ -44,3 +44,15 @@ function formatTime(timeString) {
     return new Date(0, 0, 0, hours, minutes).toLocaleTimeString([],
         { hour: 'numeric', minute: '2-digit', hour12: true });
 }
+
+  // Get ID from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get('id');
+
+  // Set the button's onclick link
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("viewBtn");
+    btn.onclick = function () {
+      window.location.href = `view_prescription.html?id=${id}`;
+    };
+  });
